@@ -4,7 +4,7 @@
 <h1 align="center"><a href="https://vert.sh">VERT.sh</a></h1>
 
 > [!IMPORTANT]
-> This fork's only purpose is added Markdown to PDF capabilities. Because I needed them personally, I kind of vibecoded it. PDF conversions are hard and I don't plan to code one yet. I might update this repo in order to make the functionality but that's it.
+> This fork's only purpose is added Markdown to PDF capabilities. Because I needed them personally, I kind of vibecoded it. PDF conversions are hard and I don't plan to code one yet. I might update this repo in order to make the functionality better but that's it.
 
 VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud. Check out the live instance at [vert.sh](https://vert.sh).
 
