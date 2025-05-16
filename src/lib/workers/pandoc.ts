@@ -34,7 +34,8 @@ type Format =
 	| ".odt"
 	| ".docbook"
 	| ".html"
-	| ".markdown";
+	| ".markdown"
+	| ".pdf";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const handleMessage = async (message: any): Promise<any> => {
@@ -53,6 +54,9 @@ const handleMessage = async (message: any): Promise<any> => {
 					throw new Error(
 						"Converting into RTF is currently not supported.",
 					);
+				}
+				if (to === ".pdf") {
+					throw new Error("PDF export is not supported in the worker. Use the frontend for PDF conversion.");
 				}
 				const buf = new Uint8Array(await file.arrayBuffer());
 				const args = `-f ${formatToReader(`.${file.name.split(".").pop() || ""}` as Format)} -t ${formatToReader(to)} --extract-media=.`;
